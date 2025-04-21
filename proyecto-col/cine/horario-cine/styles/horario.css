@@ -198,11 +198,6 @@
 }
 
 @media (max-width: 900px) {
-    .cine-horarios-sidebar {
-        flex-direction: row;
-        gap: 16px;
-        justify-content: center;
-    }
 
     .cine-horarios-banner {
         max-width: 220px;
@@ -438,10 +433,15 @@
     gap: 10px;
 }
 
+
+
+
 @media (max-width: 900px) {
+    .cine-horarios-grid
     .detalle-pelicula-titulo-container{
         align-items: center;
     }
+
     .detalle-pelicula-tags{
         justify-content: center;
         border-top: 1px solid #104596;

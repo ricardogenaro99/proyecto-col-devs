@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cartelera</title>
+    <title>Horario</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet"
@@ -21,98 +21,73 @@
     <link rel="stylesheet" href="../styles/slider_cine.css" />
     <link rel="stylesheet" href="../styles/slider_estreno.css" />
     <link rel="stylesheet" href="../styles/slider_detail.css" />
-    <link rel="stylesheet" href="./styles/cartelera.css" />
+    <link rel="stylesheet" href="./styles/salas.css" />
 
     <!-- JavaScript-->
-    <script src="../static/slider-estreno.js"></script>
-    <script src="../static/slider-cine.js"></script>
-    <script src="../static/slider-cartelera.js"></script>
-    <script src="../static/slider-detail.js"></script>
     <script src="./static/index.js"></script>
+
 
 </head>
 
 <body class="body-container">
     <div id="main-header-cine"></div>
+
     <main class="main-container">
+        <!-- Seccion grilla de horarios -->
+        <section class="cine-horarios-section">
+            <div class="cine-horarios-grid container-max-width">
 
-        <!-- Seccion grilla cartelera -->
-        <section class="main-section-content py-5 bg-white">
-            <div class=" container-max-width">
-                <div class="d-flex flex-column gap-3 hide-800 w-100 position-relative ">
-                    <div class="title">
-                        <h2 class="section-title m-0 p-0">CARTELERA CINE</h2>
-                        <button id="btnAbrirFiltros" class="btn btn-outline-primary align-items-center gap-2 px-4 py-2 rounded-pill btn-filtros">
-                            <i class="fa fa-sliders"></i>
-                            <span>Filtros</span>
-                        </button>
-                        <div id="filtrosModal" class="modal filtros-modal" tabindex="-1">
-                            <div class="modal-dialog filtros-modal-dialog">
-                                <div class="modal-content filtros-modal-content">
-                                    <div class="modal-header border-0 pb-0 d-flex flex-column align-items-center">
-                                        <h2 class="modal-title mb-3 filtros-modal-title">Filtros</h2>
-                                    </div>
-                                    <div class="modal-body d-flex flex-column gap-3">
-                                        <select id="selectCiudad" class="form-select mb-2 filtros-select"></select>
-                                        <select id="selectSala" class="form-select mb-4 filtros-select"></select>
-                                        <button id="btnConsultar" class="btn btn-primary rounded-pill w-100 btn-consultar">Consultar</button>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="cine-horarios-list">
+                    <div class="cine-horarios-header mb-4">
+                        <span style="font-size:clamp(1.125rem, 0.957rem + 0.673vw, 1.563rem); font-weight:900; color:#1a3876; letter-spacing:1px;">
+                            ALTAVISTA – ROYAL FILMS
+                        </span>
+                        <span style="font-size:clamp(1.125rem, 0.957rem + 0.673vw, 1.563rem); color:#1a3876; font-weight:400; margin-left:8px;">
+                            BOGOTÁ (D.C.)
+                        </span>
+                        <div class="d-flex align-items-center gap-4 mt-3" style="flex-wrap: wrap;">
+                            <span class="d-flex align-items-center text-detalle">
+                                <i class="fa-solid fa-location-dot me-2" style="color:#1a3876;"></i>
+                                Cra 1 Nº 65 D 58 Sur Centro Comercial Altavista
+                            </span>
+                            <span class="d-flex align-items-center text-detalle">
+                                <i class="fa-solid fa-phone me-2" style="color:#1a3876;"></i>
+                                56 453 4564
+                            </span>
+                            <span class="d-flex align-items-center text-detalle">
+                                <i class="fa-solid fa-film me-2" style="color:#1a3876;"></i>
+                                Salas: 4
+                            </span>
                         </div>
                     </div>
-                    
-                    <div class="group-filter">
-                        
-                        
-
-                        <button id="btnCiudad"
-                            class="form-select mb-3 d-flex align-items-center justify-content-between" type="button"
-                            onclick="mostrarCiudades()" style="cursor:pointer;">
-                            <span id="btnCiudadText">Ciudad</span>
-                        </button>
-                        <div id="ciudades-listado" class="ciudades-modal" style="display:none;">
-                            <h2 class="section-title text-center mb-3">ELIGE TU CIUDAD</h2>
-                            <div class="ciudades-search-bar mb-3">
-                                <div class="search-input-wrapper">
-                                    <span class="search-icon"><i class="fa fa-search"></i></span>
-                                    <input type="text" class="form-control search-input" placeholder="Buscar ciudad...">
-                                </div>
-                            </div>
-                            <div class="ciudades-grid">
-                            </div>
-                        </div>
-                        <button id="btnSala" class="form-select mb-3 d-flex align-items-center justify-content-between"
-                            type="button" onclick="mostrarSalas()" style="cursor:pointer;">
-                            <span id="btnSalaText">Sala</span>
-                        </button>
-                        <div id="salas-listado" class="salas-modal" style="display:none;">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <h2 class="section-title text-start mb-0" style="font-size:1.2rem;"><b>Salas</b></h2>
-                                <i class="fa fa-chevron-up" style="cursor:pointer;" onclick="cerrarSalas()"></i>
-                            </div>
-                            <div class="sala-grid">
-                            </div>
-                        </div>
-                        <div class="search-bar">
-                            <input type="text" placeholder="Buscar...">
-                            <button type="button" class="fa fa-search" aria-label="Buscar"></button>
-                        </div>
-                    </div>
+                    <div id="cine-horarios-content"></div>
                 </div>
-
-                <div class="grid-two-section-60-40">
-                    <div class="section-cartelera-derecha gap-5">
+                <div class="cine-horarios-sidebar">
+                    <div class="cine-horarios-consulta">
+                        <h3>Consulta más horarios</h3>
+                        <select id="ciudad" class="cine-horarios-select">
+                            <option>Bogotá</option>
+                            <option>Medellín</option>
+                            <option>Cali</option>
+                        </select>
+                        <select id="sala" class="cine-horarios-select">
+                            <option>Elige tu sala favorita</option>
+                            <option>Altavista - Royal Films</option>
+                            <option>Andino - Cine Colombia</option>
+                        </select>
+                        <select id="fecha" class="cine-horarios-select">
+                            <option>Hoy 30 Enero</option>
+                            <option>Mañana 31 Enero</option>
+                        </select>
+                        <button class="cine-horarios-btn">Consultar</button>
                     </div>
-
-                    <div class="grid-two-section-60-40-rgt d-grid gap-4">
+                    <div class="grid-two-section-60-40-rgt d-grid gap-4 ">
                         <div class="flyer pb-3 row">
                             <div class="sidebar-ad col-10">
-                                <img src="/assets/img/breaking-news-banner.png"
+                                <img src="/assets/img/poster-vertical.png"
                                     alt="¿Cuánto tiempo toma tonificar el cuerpo con yoga de silla según mi edad?"
                                     class="img-fluid img-yoga" />
                             </div>
-
                             <div class="col-2">
                                 <div class="social-sidebar-bn">
                                     <div class="social-icons-bn">
@@ -150,33 +125,12 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Seccion grilla estrenos -->
-        <div id="main-slider-cine"></div>
-
-        <!-- Seccion grilla recomendados -->
-        <section class="main-section-content container-max-width slider-cartelera">
-            <div class="d-flex justify-content-between align-items-center hide-800 w-100 position-relative ">
-                <h2 class="section-title  m-0 p-0">PRÓXIMOS ESTRENOS</h2>
-            </div>
-            <div id="main-slider-cartelera"></div>
-        </section>
-
-        <!-- Seccion grilla mas peliculas mobile -->
-        <section class="main-section-content container-max-width slider-estreno ">
-            <div class="d-flex justify-content-between align-items-center hide-800 w-100">
-                <h2 class="section-title m-0 p-0">Mas Películas</h2>
-            </div>
-            <div id="main-slider-estreno"></div>
-            <div class="button">
-                <a href="#" class="btn-azul-blanco">Ver Mas</a>
-            </div>
-        </section>
 
         <!-- Seccion flayer y grilla noticias -->
         <section class="main-section-content py-5 bg-white">
@@ -184,6 +138,7 @@
                 <div class="grid-two-section-60-40">
                     <!-- Seccion izquierdo -->
                     <div class="grid-two-section-60-40-lft">
+
                         <div class="grid-articles-2 grid-mas-noticias">
                             <div class="d-flex justify-content-between align-items-center hide-800 w-100">
                                 <h2 class="section-title m-0 p-0">NOTICIAS RELACIONADAS</h2>
@@ -262,7 +217,7 @@
                         </div>
                     </div>
                     <!-- Seccion derecho -->
-                    <div class=".grid-two-section-60-40-right d-grid gap-4">
+                    <div class="grid-two-section-60-40-right d-grid gap-4">
                         <div class="grid-articles-2 grid-lo-ultimo-colombia">
                             <div class="d-flex justify-content-center align-items-center hide-800">
                                 <h2 class="section-title m-0 p-0">Lo último en Colombia</h2>
