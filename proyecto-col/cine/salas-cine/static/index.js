@@ -84,7 +84,7 @@ function renderCinemaLocations() {
   cinemaLocations.forEach((location,index) => {
     let locationHtml = `
       <div class="cinema-location-item">
-        <div class="d-flex align-items-center justify-content-between p-3 location-header">
+        <div class="d-flex align-items-center justify-content-between p-2 location-header">
           <div class="d-flex align-items-center">
             <span class="location-name">${location.city}</span>
             <span class="location-count">${location.count}</span>
@@ -98,9 +98,9 @@ function renderCinemaLocations() {
 
     if (location.expanded && location.cinemas.length > 0) {
       locationHtml += `<div class="cinema-list">`;
-      location.cinemas.forEach(cinema => {
+      location.cinemas.forEach((cinema,index) => {
         locationHtml += `
-          <div class="cinema-item d-flex align-items-center justify-content-between p-3">
+          <div class="cinema-item d-flex align-items-center justify-content-between" style="padding: 0px 20px; background-color: ${index % 2 === 0 ? '#fff' : '#F3F8FF'};">
             <div class="d-flex align-items-center">
               <span class="cinema-bullet">•</span>
               <a href="#" class="cinema-name">${cinema.name}</a>
@@ -117,7 +117,7 @@ function renderCinemaLocations() {
 
     locationHtml += `</div>`;
     locationHtml += (index === 2 || index === 5) ?
-      '<div class="justify-content-center align-items-center hide-800 w-100 position-relative image-anuncio pt-3 pb-3">' +
+      '<div class="justify-content-center align-items-center hide-800 w-100 position-relative image-anuncio pt-0 pb-0">' +
       '<img src="/assets/img/banner-copa-america.png" alt="img" />' +
       '</div>' : '';    
     

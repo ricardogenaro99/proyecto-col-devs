@@ -114,13 +114,15 @@ nav {
 	align-items: center;
 	position: relative;
 	width: 220px;
+	border-radius: 20px;
+	
 }
 
 .search-bar input {
 	width: 220px;
-	padding: 8px 40px 8px 15px; 
-	border: 1px solid #ddd;
+	padding: 8px 15px 8px 40px; 
 	border-radius: 20px;
+	border: 1px solid #104596;
 	font-size: 14px;
 	outline: none;
 	transition: border 0.3s;
@@ -132,7 +134,7 @@ nav {
 
 .search-bar .fa-search {
 	position: absolute;
-	right: 15px;
+	left: 15px;
 	color: #0f3c81;
 	cursor: pointer;
 	background: none;

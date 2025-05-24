@@ -2965,10 +2965,18 @@ li{
   list-style: none;
 }
 
+.card-notice-first{
+  width: 69%; 
+  margin-bottom: 20px;
+}
+
 /* Media queries para ajustes adicionales */
 @media (max-width: 992px) {
   .col-lg-2-4 {
     width: 25%;
+  }
+  .card-notice-first{
+    width:100% !important; 
   }
 
   .only-mobile{

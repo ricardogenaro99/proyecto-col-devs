@@ -449,6 +449,17 @@
 	font-size: 12px;
 }
 
+.card-article-2-leer-mas{
+	font-size: 12px;
+	color: #104596;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.card-article-2-autor{
+	color: #191C36;
+}
+
 .ciudades-grid span {
 	color: #1846a3;
 	font-weight: 500;

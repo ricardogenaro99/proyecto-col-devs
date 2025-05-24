@@ -80,10 +80,13 @@
 
 .movie-info span{
     color: #104596;
+    font-size: 8px;
 }
 
 .movie-info p{
     color: black;
+    font-size: 8px;
+    margin-bottom: 2px;
 }
 
 .trailer-btn{

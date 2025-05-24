@@ -48,7 +48,7 @@ const SalaData = [
     container.innerHTML = '';
     SalaData.forEach((pelicula,index) => {
       let html = `
-        <div class="d-flex align-items-start pb-4" style="border-bottom:1px solid #1a38761a;">
+        <div class="d-flex align-items-start pb-4" style="border-bottom:1px solid #1a38761a; margin-top: 20px;">
           <img src="${pelicula.poster}" alt="${pelicula.titulo}" class="card-img">
           <div class="flex-grow-1 card-left">
             <h3 class='card-titulo'>${pelicula.titulo}</h3>

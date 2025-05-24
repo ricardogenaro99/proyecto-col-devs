@@ -34,7 +34,7 @@
 		
 		<!-- Seccion grilla cartelera -->
 		<section class="main-section-content py-5 bg-light">
-			<div class="container-max-width d-flex flex-column gap-4">
+			<div class="container-max-width d-flex flex-column gap-4" style="background-color: #F3F8FF !important;">
 				<!-- Filtros y título -->
 				<div class="d-flex flex-row justify-content-between align-items-center">
 					<div class="d-flex flex-column gap-1">
@@ -64,7 +64,7 @@
 					<div class="group-filter">
 						<button id="btnCiudad"
 							class="form-select mb-3 d-flex align-items-center justify-content-between" type="button"
-							onclick="mostrarCiudades()">
+							onclick="mostrarCiudades()" style="border: 1px solid #104596;">
 							<span id="btnCiudadText">Ciudad</span>
 						</button>
 						<div id="ciudades-listado" class="ciudades-modal">
@@ -79,7 +79,7 @@
 							</div>
 						</div>
 						<button id="btnSala" class="form-select mb-3 d-flex align-items-center justify-content-between"
-							type="button" onclick="mostrarSalas()">
+							type="button" onclick="mostrarSalas()" style="border: 1px solid #104596;">
 							<span id="btnSalaText">Sala</span>
 						</button>
 						<div id="salas-listado" class="salas-modal">
@@ -91,6 +91,7 @@
 							</div>
 						</div>
 						<button id="btnHorarios"
+							style="border: 1px solid #104596;"
 							class="form-select mb-3 d-flex align-items-center justify-content-between" type="button"
 							onclick="mostrarHorarios()">
 							<span id="btnHorariosText">Horarios</span>
@@ -179,7 +180,7 @@
 				</div>
 				<hr class="my-4">
 				<!-- Sinopsis, calificación usuario y elenco -->
-				<div class="d-flex flex-lg-row flex-column-reverse gap-4">
+				<div class="d-flex flex-lg-row flex-column-reverse" style="gap: clamp(1.875rem, 0.673rem + 4.808vw, 5rem);">
 					<div class="d-flex flex-column gap-3">
 						<h5 class="sinopsis-title">Sinopsis:</h5>
 						<p class="sinopsis-movie">
@@ -208,6 +209,7 @@
 							</div>
 						</div>
 					</div>
+					<div class="line"></div>
 					<div class="d-flex flex-column gap-3"
 						style="min-width: clamp(18.75rem, 17.548rem + 4.808vw, 21.875rem)">
 						<div class="d-flex flex-row align-items-center gap-2 justify-content-center">
@@ -250,7 +252,7 @@
 
 		<section class="main-section-content notice py-5 bg-white">
 			<div class="container-max-width">
-				<div class="d-flex flex-row gap-3">
+				<div class="d-flex flex-row gap-4">
 					<div class="">
 						<div class="d-flex justify-content-between align-items-center mb-3">
 							<h2 class="section-title m-0 p-0">VIDEOS</h2>
@@ -351,24 +353,24 @@
 											<span class="text-primary me-2">&#8226;</span>
 											<span class="reparto-desc">Christopher
 												Abbott</span>como Blake Lovell<br>
-											<span class="fw-bold reparto-desc">Hombre lobo.</span>
+											<span class="fw-bold reparto-desc" style="color: #104596;">Hombre lobo.</span>
 										</li>
 										<li class="mb-3">
 											<span class="text-primary me-2">&#8226;</span>
 											<span class="reparto-desc">Julia
 												Garner</span> como Charlotte Lovell<br>
-											<span class="fw-bold reparto-desc">La esposa de Blake.</span>
+											<span class="fw-bold reparto-desc" style="color: #104596;">La esposa de Blake.</span>
 										</li>
 										<li class="mb-3">
 											<span class="text-primary me-2">&#8226;</span>
 											<span class="reparto-desc">Matilda Firth</span> como Ginger Lovell<br>
-											<span class="fw-bold reparto-desc">La hija de Blake y Charlotte.</span>
+											<span class="fw-bold reparto-desc" style="color: #104596;">La hija de Blake y Charlotte.</span>
 										</li>
 										<li class="mb-3">
 											<span class="text-primary me-2">&#8226;</span>
 											<span class="reparto-desc">Sam
 												Jaeger</span> como Grady Lovell<br>
-											<span class="fw-bold reparto-desc">Hombre lobo, el padre distanciado de
+											<span class="fw-bold reparto-desc" style="color: #104596;">Hombre lobo, el padre distanciado de
 												Blake.</span>
 										</li>
 									</ul>
@@ -379,13 +381,13 @@
 											<span class="text-primary me-2">&#8226;</span>
 											<span class="reparto-desc">Ben
 												Prendergast</spam> como<br>
-												<span class="fw-bold reparto-desc">Hombre lobo.</span>
+												<span class="fw-bold reparto-desc" style="color: #104596;">Hombre lobo.</span>
 										</li>
 										<li class="mb-3">
 											<span class="text-primary me-2">&#8226;</span>
 											<span class="reparto-desc">Benedict
 												Hardie</sapm> como<br>
-												<span class="fw-bold reparto-desc">Derek.</span>
+												<span class="fw-bold reparto-desc" style="color: #104596;">Derek.</span>
 										</li>
 										<li class="mb-3">
 											<span class="text-primary me-2">&#8226;</span>
@@ -408,7 +410,7 @@
 
 					</div>
 					<div
-						class="col-lg-4 col-xl-5 col-12 align-items-start justify-content-center flex-column gap-5 section-right">
+						class="col-lg-4 col-12 align-items-start justify-content-center flex-column gap-5 section-right">
 						<div class="flyer pb-3 row anuncio-vertical">
 							<div class="sidebar-ad col-10">
 								<img src="/assets/img/poster-vertical.png"
